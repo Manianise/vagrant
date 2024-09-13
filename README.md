@@ -1,7 +1,7 @@
 ### Easy to install 2 machines with bento/ubuntu
 
-![vagrant]https://img.shields.io/badge/vagrant-VM-1868F2?logo=vagrant
-![ubuntu]https://img.shields.io/badge/ubuntu-v22.04.4-E95420?logo=ubuntu
+![vagrant](https://img.shields.io/badge/vagrant-VM-1868F2?logo=vagrant)
+![ubuntu](https://img.shields.io/badge/ubuntu-v22.04.4-E95420?logo=ubuntu)
 
 > #### Make sure you have [vagrant](https://developer.hashicorp.com/vagrant/docs/installation) installed
 >> user/password is always vagrant/vagrant

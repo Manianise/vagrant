@@ -1,0 +1,1 @@
+{"virtualbox":{"/data":{"guestpath":"/data","hostpath":"C:/wamp64/www/production/Vagrant","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/wamp64/www/production/Vagrant/prometheus-grafana","disabled":false,"__vagrantfile":true}}}

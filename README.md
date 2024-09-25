@@ -1,31 +1,42 @@
-### Easy to install 2 machines with bento/ubuntu
+### Easy to install Prometheus and Grafana with ansible on Ubuntu using bento/ubuntu Vagrant box
 
 ![vagrant](https://img.shields.io/badge/vagrant-VM-1868F2?logo=vagrant)
-![ubuntu](https://img.shields.io/badge/ubuntu-v22.04.4-E95420?logo=ubuntu)
+![ubuntu](https://img.shields.io/badge/ubuntu-v22.04-E95420?logo=ubuntu)
+![grafana](https://img.shields.io/badge/grafana-latest-F46800?logo=grafana)
+![prometheus](https://img.shields.io/badge/prometheus-latest-E6522C?logo=prometheus)
 
 > #### Make sure you have [vagrant](https://developer.hashicorp.com/vagrant/docs/installation) installed
->> user/password is always vagrant/vagrant
+
+User/password is always vagrant/vagrant | You need Grafana credentials for this code to work
+|--------------------------------------|-----------------------------------------------|
 
 ***
 
-#### Run the VMS
+#### Run the file
 ```
-vagrant up &&
+vagrant up --provision
+```
+
+#### Login to VMs with SSH
+
+```
 vagrant ssh <HOSTNAME>
 ```
 
-#### If you wish to add GUI :
+#### Setting up Prometheus/Grafana
+
+- Ansible is automatically installed on vagrant boxes. run the following command to install
+
+|  /!\ You will need Grafana credentials user name and pwd to run this code : |
+|-------------------------------------------------|
 
 ```
-sudo apt-get update &&
-sudo apt-get install -y ubuntu-desktop
-sudo apt-get install -y gnome-core gdm3
-sudo systemctl set-default graphical.target
+cd /vagrant/data/ansible-prometheus-grafana/
 ```
 
-#### Restart VM
+- Replace content of vault.yml with Grafana credentials
 
 ```
-sudo reboot
+ansible-galaxy install -r requirements.yml
+ansible-playbook playbook.yml
 ```
-
